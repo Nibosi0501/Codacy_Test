@@ -5,7 +5,8 @@ using UnityEngine;
 public class Balloon : MonoBehaviour
 {
 
-    [SerializeField] private GameObject board;
+    [SerializeField]
+    readonly GameObject board;
     [SerializeField] private GameObject upper_limit;
     [SerializeField] private GameObject lower_limit;
     [SerializeField] private float balloon_upward_speed = 1.0f;
@@ -27,7 +28,6 @@ public class Balloon : MonoBehaviour
         {
             if (current_board_position.y > min_position.y)
             {
-                //Debug.Log("Balloon is going up");
                 new_board_position.y += balloon_downward_speed * Time.deltaTime;
             }
         }
@@ -35,7 +35,6 @@ public class Balloon : MonoBehaviour
         {
             if (current_board_position.y < max_position.y)
             {
-                //Debug.Log("Balloon is going down");
                 new_board_position.y += balloon_upward_speed * Time.deltaTime;
             }
         }

@@ -6,7 +6,7 @@ public class Balloon : MonoBehaviour
 {
 
     [SerializeField]
-    readonly GameObject board;
+    private GameObject board;
     [SerializeField] private GameObject upper_limit;
     [SerializeField] private GameObject lower_limit;
     [SerializeField] private float balloon_upward_speed = 1.0f;
